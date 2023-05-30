@@ -16,8 +16,6 @@
 
 .maincard p {
     font-family: 'Roboto Mono', monospace;
-    display: block;
-    margin: auto;
 }
 
 .maincard b {
@@ -75,7 +73,6 @@ p {
     }
     .maincard p {
         text-align: justify;
-        display: block;
-        margin: 0 5px 0 5px;
+        margin: 0 10px 0 10px;
     }
 }
