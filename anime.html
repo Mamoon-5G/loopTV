@@ -14,6 +14,7 @@
   <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/2d399dc2b9.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/anime.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
@@ -23,15 +24,37 @@
         <a class="navbar-brand">loopTV</a>
         <form class="d-flex" role="search">
           <input class="form-control me-2 srch" id="search" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-primary" type="submit">
-            Subscribe
-          </button>
-          <button class="btn btn-link-sm" type="submit">LOGIN</button>
+          <button class="btn btn-primary btn-sm login" type="button">LOGIN</button>
         </form>
       </div>
     </nav>
   </section>
-  <a href="#">
+  <div class="message">
+    <span id="msg">Welcome User</span>
+  </div>
+  <div class="logincontainer">
+    <div class="login">
+      <h2>LOGIN</h2>
+      <p>Please Login to continue</>
+        <!-- <label for="uname"><b>Username</b></label> -->
+      <div class="close">
+        <img src="images/close.png" alt="" height="30px">
+      </div>
+      <div class="input-field">
+        <input type="text" placeholder="Enter Username" name="uname" id="username" />
+      </div>
+      <h5 class="u_msg"></h5>
+      <div class="input-field">
+        <input type="password" placeholder="Enter Password" name="psw" id="pass" />
+        <i class="uil uil-lock icon"></i>
+        <i class="fa fa-eye showP icon" onclick="show()"></i>
+      </div>
+      <!-- <label for="psw"><b>Password</b></label> -->
+      <h5 class="p2"></h5>
+      <input type="submit" class="b1" value="LOGIN" onclick="login()"/>
+      <p>Don't Have an account?<a href="signup.html">Sign Up</a></p>
+    </div>
+  </div>
     <div class="maincard">
       <img src="images/One-Piece-Anime-Characters-45-45CM-Square-Pillow-Case-PillowCases-25050.webp" alt="">
       <div class="name">
@@ -46,8 +69,6 @@
         <button class="watch" onclick="redirect('onepiece')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
     <div class="maincard">
       <img src="images/hunter.webp" alt="">
       <div class="name">
@@ -63,8 +84,7 @@
         <button class="watch" onclick="redirect('hxh')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/death.webp" alt="">
       <div class="name">
@@ -81,8 +101,7 @@
         <button class="watch" onclick="redirect('deathnote')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/OnePunchMan-Header-OVA1-600.webp" alt="">
       <div class="name">
@@ -99,8 +118,7 @@
         <button class="watch" onclick="redirect('opm')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/naruto.webp" alt="">
       <div class="name">
@@ -120,8 +138,7 @@
         <button class="watch" onclick="redirect('naruto')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/bleach.jpg" alt="">
       <div class="name">
@@ -137,8 +154,7 @@
         <button class="watch" onclick="redirect('bleach')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/aot.jpg" alt="">
       <div class="name">
@@ -155,8 +171,7 @@
         <button class="watch" onclick="redirect('aot')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/steinsgate.jpg" alt="">
       <div class="name">
@@ -179,8 +194,7 @@
         <button class="watch" onclick="redirect('steinsgate')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/parasyte.jpg" alt="">
       <div class="name">
@@ -199,8 +213,7 @@
         <button class="watch" onclick="redirect('parasyte')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/sds.jpg" alt="">
       <div class="name">
@@ -217,8 +230,7 @@
         <button class="watch" onclick="redirect('sds')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/monster.jpg" alt="">
       <div class="name">
@@ -244,8 +256,7 @@
         <button class="watch" onclick="redirect('monster')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/assassinationclass.jpg" alt="">
       <div class="name">
@@ -262,8 +273,7 @@
         <button class="watch" onclick="redirect('assassinationclass')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/codegeass.jpg" alt="">
       <div class="name">
@@ -281,8 +291,7 @@
         <button class="watch" onclick="redirect('codegeass')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/vinlandsaga.jpg" alt="">
       <div class="name">
@@ -300,8 +309,7 @@
         <button class="watch" onclick="redirect('vinland')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/tpnl.jpg" alt="">
       <div class="name">
@@ -317,8 +325,7 @@
         <button class="watch" onclick="redirect('tpnl')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/fmab.jpg" alt="">
       <div class="name">
@@ -337,8 +344,7 @@
         <button class="watch" onclick="redirect('fmab')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/erased.jpg" alt="">
       <div class="name">
@@ -357,8 +363,7 @@
         <button class="watch" onclick="redirect('erased')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/demonslayer.jpg" alt="">
       <div class="name">
@@ -375,8 +380,7 @@
         <button class="watch" onclick="redirect('demonslayer')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/drstone.jpg" alt="">
       <div class="name">
@@ -391,8 +395,7 @@
         <button class="watch" onclick="redirect('drstone')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/another.jpg" alt="">
       <div class="name">
@@ -412,8 +415,7 @@
         <button class="watch" onclick="redirect('another')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/eliteclass.jpg" alt="">
       <div class="name">
@@ -431,8 +433,7 @@
         <button class="watch" onclick="redirect('classelite')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/ngnl.jpg" alt="">
       <div class="name">
@@ -449,8 +450,7 @@
         <button class="watch" onclick="redirect('ngnl')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/noragami.jpg" alt="">
       <div class="name">
@@ -468,8 +468,7 @@
         <button class="watch" onclick="redirect('noragami')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/yourlie.jpg" alt="">
       <div class="name">
@@ -489,8 +488,7 @@
         <button class="watch" onclick="redirect('yourlie')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
+
     <div class="maincard">
       <img src="images/mob100.jpg" alt="">
       <div class="name">
@@ -509,8 +507,6 @@
         <button class="watch" onclick="redirect('mob100')">Watch Now</button>
       </div>
     </div>
-  </a>
-  <a href="#">
     <div class="maincard">
       <img src="images/tokyoghoul.jpg" alt="">
       <div class="name">
@@ -528,7 +524,6 @@
         <button class="watch" onclick="redirect('tokyoghoul')">Watch Now</button>
       </div>
     </div>
-  </a>
   <footer id="footer">
     <i class="fa-brands fa-facebook-f"></i>
     <i class="fa-brands fa-twitter"></i>
@@ -539,5 +534,5 @@
   </footer>
 </body>
 <script src="js/script.js"></script>
-
+<script src="js/login.js"></script>
 </html>
